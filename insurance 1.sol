@@ -71,12 +71,7 @@ contract TechInsurance {
     }
     
     function clientSelect(uint _productIndex) public payable {
-        require(productIndex[_productIndex].offered == false, "This item is sold out!");
-        require(msg.value <= productIndex[_productIndex].price, "You don't have enough tokens!");
-        
-        changeFalse(_productIndex);        
-        Client(true, block.timestamp);
-        insOwner.transfer(msg.value); 
+       
     } 
     
 }
