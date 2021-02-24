@@ -70,8 +70,16 @@ contract TechInsurance {
     
     }
     
-    function clientSelect(uint _productIndex) public payable {
-       
-    } 
+   function clientSelect(uint _productIndex) public payable returns(bool) {
+        Select memory s = Client(_productIndex);
+        if (s.productIndex != productIndex){
+            emit ErrorNotAvailable(msg.sender,_productIndex); //"Not Available"
+            return s[_productIndex].isUnValid == false;
+            }
+        else {
+        emit ClientSelecttAvailable(msg.sender,_productIndex); //"Available"   
+        return s[_productIndex].isValid == true;
+        }
+        }
     
 }
