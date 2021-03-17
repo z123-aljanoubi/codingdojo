@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Insurance contract</title>
+  </head>
+  <style>
+    input {
+      display: block;
+      margin-bottom: 12px;
+    }
+  </style>
+  <body>
+    <h1>Insurance — Example Truffle dApp</h1>
+    <p>You have <strong class="balance">loading...</strong> META</p>
+
+    <h1>add product</h1>
+
+
+    
+    <label for="productId">productId:</label>
+    <input type="text" id="productId" placeholder="productId" />
+
+    <label for="productName">productName:</label>
+    <input type="text" id="productName" placeholder="productName" />
+
+    <label for="price">price:</label>
+    <input type="text" id="price" placeholder="price" />
+
+
+<!--
+    <label for="productOwnerAddress">productOwnerAddress:</label>
+    <input type="text" id="productOwnerAddress" placeholder="productOwnerAddress" />
+  -->
+
+    
+    <button onclick="App.addProduct()">Add product</button>
+
+    <p id="status"></p>
+
+    <script src="index.js"></script>
+	
+	
+	<h1>Get product</h1>
+
+    <label for="productID">ProductID:</label>
+    <input
+      type="text"
+      id="productId1"
+      placeholder="e.g. 1"
+    />
+	<button onclick="App.getProduct()">Get Product</button>
+  <p>Product ID: <strong class="fProduct" ></strong>  </p>
+  <p>Product Name: <strong class="fProduct" ></strong>  </p>
+  <p>Price: <strong class="fProduct" ></strong>  </p>
+  <p>offered: <strong class="fProduct" ></strong>  </p>  
+  <p>Owner Address: <strong class="fProduct" ></strong>  </p> 
+  
+  
+  <h1>Buy product</h1>
+
+  <input
+  type="text"
+  id="productIDB"
+  placeholder="e.g. 1"
+/>
+<input
+type="text"
+id="cAddress"
+placeholder="e.g. 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"
+/>
+
+<button onclick="App.buyProduct()">Buy Product</button>
+  </body>
+</html>
+
